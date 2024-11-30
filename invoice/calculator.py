@@ -8,6 +8,8 @@ df['Date'] = pd.to_datetime(df['Date'])
 
 df = df.dropna()
 
+hourly_rate = input("Enter the hourly rate: ")
+
 month = input("Enter the month in numeric format, (11 for November, etc): ")
 print(month)
 
@@ -41,8 +43,8 @@ df_huzaifa['Hours'] = df_huzaifa['Hours'].round(2)
 total_hours_huzaifa = df_huzaifa['Hours'].sum()
 print(f"Total hours worked by Huzaifa in month of {month} is {total_hours_huzaifa}")
 
-invoice_hashim = total_hours_hashim * 2000
-invoice_huzaifa = total_hours_huzaifa * 2000
+invoice_hashim = total_hours_hashim * hourly_rate
+invoice_huzaifa = total_hours_huzaifa * hourly_rate
 print(f"Total invoice for Hashim in month of {month} is PKR {invoice_hashim}")
 print(f"Total invoice for Huzaifa in month of {month} is PKR {invoice_huzaifa}")
 
