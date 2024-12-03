@@ -1,6 +1,6 @@
 import pandas as pd
 
-url = "Google Sheets Link Here"
+url = "https://docs.google.com/spreadsheets/d/1qsQ4m0IoYG_aSZmOl1SJSxr5UnpiLuyBYzs_RtfLE-E/export?format=csv&gid=0"
 df = pd.read_csv(url)
 
 df = df[['Date', 'Start Time', 'End Time', 'Session Taken By']]
