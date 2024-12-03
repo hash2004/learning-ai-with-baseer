@@ -9,7 +9,7 @@ df['Date'] = pd.to_datetime(df['Date'])
 df = df.dropna()
 
 hourly_rate = input("Enter the hourly rate: ")
-
+hourly_rate = float(hourly_rate)
 month = input("Enter the month in numeric format, (11 for November, etc): ")
 print(month)
 
